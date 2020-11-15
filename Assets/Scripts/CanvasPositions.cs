@@ -21,13 +21,24 @@ public class CanvasPositions : MonoBehaviour
     {
         int width = Screen.width;
         int height = Screen.height;
-        pauseButton.GetComponent<RectTransform>().localPosition = new Vector3(-width/2+40,height/2-20,10);
-        ScoreText.GetComponent<RectTransform>().localPosition = new Vector3(-width/2+90,height/2-50,10);
-        HP.GetComponent<RectTransform>().localPosition = new Vector3(-width/2+90,height/2-80,10);
 
-        soundButton.GetComponent<RectTransform>().localPosition = new Vector3(width/2-20,height/2-20,10);
-        cameraButton.GetComponent<RectTransform>().localPosition = new Vector3(width/2-40,height/2-50,10);
-        flipButton.GetComponent<RectTransform>().localPosition = new Vector3(width/2-40,height/2-80,10);
+        pauseButton.GetComponent<RectTransform>().sizeDelta = new Vector2(width/10,height/20);
+        ScoreText.GetComponent<RectTransform>().sizeDelta = new Vector2(width/8,height/15);
+        HP.GetComponent<RectTransform>().sizeDelta = new Vector2(width/8,height/15);
+
+        pauseButton.GetComponent<RectTransform>().localPosition = new Vector3(-width/2.5f,height/2.5f,10);
+        ScoreText.GetComponent<RectTransform>().localPosition = new Vector3(-width/2.5f,height/3.0f,10);
+        HP.GetComponent<RectTransform>().localPosition = new Vector3(-width/2.5f,height/3.5f,10);
+
+
+
+        soundButton.GetComponent<RectTransform>().localPosition = new Vector3(width/2.5f,height/3.5f+100,10);
+        cameraButton.GetComponent<RectTransform>().localPosition = new Vector3(width/2.5f,height/3.5f+50,10);
+        flipButton.GetComponent<RectTransform>().localPosition = new Vector3(width/2.5f,height/3.5f,10);
+
+        soundButton.GetComponent<RectTransform>().sizeDelta = new Vector2(width/10,height/20);
+        cameraButton.GetComponent<RectTransform>().sizeDelta = new Vector2(width/10,height/20);
+        flipButton.GetComponent<RectTransform>().sizeDelta = new Vector2(width/10,height/20);
     }
 
     // Update is called once per frame
